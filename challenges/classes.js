@@ -1,3 +1,7 @@
+// THIS IS A SPACE BETWEEN ANSWERS
+console.log('');
+// THIS IS A SPACE BETWEEN ANSWERS
+
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
 class CuboidMaker {
@@ -24,4 +28,36 @@ const cuboid = new CuboidMaker({
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
+
+// THIS IS A SPACE BETWEEN ANSWERS
+console.log('');
+// THIS IS A SPACE BETWEEN ANSWERS
+
+
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+
+class CubeMaker extends CuboidMaker{
+    constructor(attributes){
+        super(attributes)
+    }
+    volumeCube(){
+        return Math.pow(this.length, 3)
+    }
+    surfaceAreaCube(){
+        return 6 * Math.pow(this.length, 2)
+    }
+}
+
+const cubeReal = new CubeMaker({
+    length: 5,
+    width: 5,
+    height: 5
+});
+
+console.log(cubeReal.volumeCube());
+console.log(cubeReal.surfaceAreaCube());
+
+
+// THIS IS A SPACE BETWEEN ANSWERS
+console.log('');
+// THIS IS A SPACE BETWEEN ANSWERS
